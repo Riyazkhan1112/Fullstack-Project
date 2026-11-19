@@ -6,6 +6,8 @@ const Home = ({props} : any) => {
     return (
         <>  
             <Navbar />
+
+            
             
             <p>Home Page</p>
             <p>Users:</p>

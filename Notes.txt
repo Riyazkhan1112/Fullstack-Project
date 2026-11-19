@@ -20,7 +20,20 @@ functional components - simple javascript function return jsx
 class components  : - A class component in React is an ES6 JavaScript class that extends React.Component and includes a required render() method to return JSX
 
                     before hooks class components used to manage state
+import React from 'react';
 
+class Counter extends React.Component {
+
+    render() {
+        return (
+            <div>
+                <h1>Hello React</h1>
+            </div>
+        );
+    }
+}
+
+export default Counter;
 
 
 react Router : - for routing 
@@ -28,3 +41,77 @@ react Router : - for routing
 
 props : props are used to pass data from parent to child 
         - like parameter
+
+
+
+State is an object that stores component data, and when state changes, React re-renders the component to update the UI.
+Lifecycle methods are special methods provided by React class components. They execute automatically at different stages of a component's lifecycle.
+
+React hooks
+
+by using the it is possible to use state and other react feature without writing class
+it should be used i nthe top level of code and never be used inside loops inside condition inside nested function 
+constructor()
+
+
+render()
+reduct complexity withoud class 
+easy to reuse stateful logic
+
+types of hooks 
+
+use state () -
+
+use effect () -
+use ref () 
+use context () 
+use memo  ()
+use callback ()
+
+
+Simple definition:
+
+Hooks are special functions in React that help us use features like state, API calls, and other React functionality inside functional components.
+
+Why do we use Hooks?
+
+Before Hooks, we used class components to manage state and lifecycle methods. Now, we can do these things using functional components and Hooks.
+
+For example:
+- useState – Store data  - manage component data manage state in functional components.. Whenever the state changes, React re-renders the component and updates the UI
+- useEffect – .useEffect is a React Hook used to handle side effects, such as API calls, timers, subscriptions, and event listeners.
+
+useEffect (() => {
+
+},[]) 
+[]  = depenadancy  <-  this is  dependancy  array ,we can control the renedring using this dependancey 
+
+- useContext – Share data between components. resolve prop drilling issue
+
+- useRef – Access input fields.
+- useMemo – Avoid repeating expensive calculations.
+- useCallback – Reuse function references.
+- useReducer – Manage complex state.
+
+
+
+
+
+we can pass the state to the another components
+
+
+Lifting state up : when the two componens need to share the same stater move state to their common parent
+
+prop Drilling = 
+propr drilling nothing but passing data through multiple components via props,
+event thorugg intermediate components dont use that data-they just forward it to next components
+
+
+
+
+Context API ; it is built in react feature used to share data between components 
+without passint Props manually thorugh every level
+
+-- avoid prop drilling 
+-shaves global data easily 
+-useful for themes authetication,user data,layer setting 
