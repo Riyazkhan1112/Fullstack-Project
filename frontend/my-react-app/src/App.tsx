@@ -6,6 +6,9 @@ import Api from "./components/hooks";
 import Drilling from "./components/drilling";
 import ContextExample from "./components/context";
 import { Routes, Route } from "react-router-dom";
+import UseRefExample from "./components/useref";
+import Form from "./components/form";
+import EventHandle from "./components/event-Handle";
 
 function App() {
 
@@ -29,6 +32,9 @@ function App() {
         <Route path = "/Api" element={<Api />} />
         <Route path="/Drilling" element={<Drilling />} />
         <Route path="/Context" element={<ContextExample />} />
+        <Route path='/UseRef' element={<UseRefExample />} />
+        <Route path="/EventHandle" element={<EventHandle />} />
+        <Route path="/Form" element={<Form />} />
       </Routes>
     </>
   );

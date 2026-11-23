@@ -63,7 +63,7 @@ types of hooks
 use state () -
 
 use effect () -
-use ref () 
+use ref ()  -  it used to store value that doesnot need to re-render the components -  also used to access DOM directly (like an input box) - html or edit or update karna without rerender
 use context () 
 use memo  ()
 use callback ()
@@ -88,7 +88,7 @@ useEffect (() => {
 
 - useContext – Share data between components. resolve prop drilling issue
 
-- useRef – Access input fields.
+- useRef – Access input fields.  
 - useMemo – Avoid repeating expensive calculations.
 - useCallback – Reuse function references.
 - useReducer – Manage complex state.
@@ -115,3 +115,27 @@ without passint Props manually thorugh every level
 -- avoid prop drilling 
 -shaves global data easily 
 -useful for themes authetication,user data,layer setting 
+
+
+
+
+
+Event Handling
+Event handling in React JS lets you respond to user interactions—like clicks, typing, and form submissions—by passing functions as props to JSX elements
+
+performing action when user intract with UI
+click type  submit hover
+
+
+
+React form 
+
+controlled  component (react uses )
+uncontrolled
+
+flow = input field -> state -> UI update
+
+
+preventDefault();  =  
+not reload on event  
+ stops the browser's built-in behavior for a specific HTML element when an event occurs. For example, it stops a <form> from reloading the page on submit, or an <a> tag from navigating to a URL on click. Importantly, it only cancels the default browser behavior—it does not stop event bubbling or capturing."
